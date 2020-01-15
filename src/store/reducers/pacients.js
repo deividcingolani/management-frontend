@@ -26,10 +26,13 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.SET_PACIENTS:
       return setPacients(state, action);
+
     case actionTypes.FETCH_PACIENTS_FAILED:
       return fetchPacientsFailed(state, action);
+
     case actionTypes.SET_INITIALIZED:
       return setInitialized(state, action);
+
     default:
       return state;
   }

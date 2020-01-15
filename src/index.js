@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import pacientsReducer from './store/reducers/pacients';
 import { BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
@@ -16,6 +16,7 @@ const composeEnhancers =
     : null || compose;
 
 const rootReducer = combineReducers({
+  pacients: pacientsReducer
 });
 
 export const store = createStore(

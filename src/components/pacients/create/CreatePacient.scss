@@ -1,0 +1,15 @@
+.button-paciente {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.header-CreatePaciente {
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .form-Paciente {
+    margin-left: 5rem;
+  }
+}

@@ -2,8 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
-  faBriefcase,
-  faPaperPlane,
   faUser
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,21 +27,9 @@ const SideBar = props => (
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tag={Link} to={"/about"}>
-            <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
-            About
-          </NavLink>
-        </NavItem>
-        <NavItem>
           <NavLink tag={Link} to={"/pacient"}>
             <FontAwesomeIcon icon={faUser} className="mr-2" />
             Pacientes
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink tag={Link} to={"/contact"}>
-            <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
-            Contacto
           </NavLink>
         </NavItem>
       </Nav>

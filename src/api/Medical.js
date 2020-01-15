@@ -1,9 +1,8 @@
 import axios from "axios";
 
-export default async term => {
+export default async function(url) {
   const response = await axios.get(
-    "https:/localhost:3000"
+    "https://gestionturnos.herokuapp.com/api/v1.0"+url
   );
-
-  return response.data.Brastlewark;
-};
+  return response.data;
+}

@@ -23,9 +23,16 @@ export const fetchPacientsFailed = () => {
 
 export const initPacients = () => {
   return dispatch => {
-    return setApi()
-      .then(Pacients => {
-        dispatch(setPacients(Pacients));
+    return setApi("/paciente")
+      .then(pacients => {
+        const pacientsCustom = pacients.map(
+          (p, i) =>
+            (p = {
+              ...p,
+              id: i + 1
+            })
+        );
+        dispatch(setPacients(pacientsCustom));
         dispatch(setInitialized(true));
       })
       .catch(() => {
